@@ -19,7 +19,7 @@ async def balance(ctx):
   wallet_amt = users[str(user.id)]["wallet"]
   bank_amt = users[str(user.id)]["bank"]
 
-  em = discord.Embed(title = f"{ctx.author.name}'s balance")
+  em = discord.Embed(title = f"{ctx.author.name}'s balance", color =random.randint(0, 16777215) )
   em.add_field(name = "Wallet balance",value = wallet_amt)
   em.add_field(name = "Bank balance",value = bank_amt)
   await ctx.send(embed = em)
